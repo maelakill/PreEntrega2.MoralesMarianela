@@ -98,10 +98,46 @@ body{
 
                  /*Estilos para fotos*/
 
-
+                
 
 
 
 
 
                  /*Estilos para donde encontrarnos*/
+           
+ .enlace{
+    display: grid;
+    justify-items: start;
+    margin: 1rem;
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium',sans-serif;
+    text-decoration: none;
+ }
+ .header {
+    color: #36A0FF;
+    font-size: 27px;
+    padding: 10px;
+}
+.bigicon {
+    font-size: 35px;
+    color: #36A0FF;
+}
+.form-group{
+    display:flex;
+    margin:1rem;
+    gap: 5rem;
+}
+.text-center{
+    color:  black;
+    font-style: italic;
+    
+}
+p{
+    text-align: center;
+    line-height: 2;
+}
+ul li{ 
+    list-style:circle;
+}
+
