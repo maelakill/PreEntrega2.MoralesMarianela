@@ -6,14 +6,13 @@ padding: 0;
 
 .logo{
     width: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 0 auto;
+    display: block;
+     margin: 0 auto;
 }
 body{
     background-image:linear-gradient(to bottom, rgb(120, 8, 120), rgb(206, 116, 131),rgb(166, 166, 7), grey);
-    font-family:'M PLUS Rounded 1c', sans-serif;  
+    font-family:'M PLUS Rounded 1c', sans-serif;
+    margin-top: 4rem;  
 }
 .navbar-toggler{
     background-color: rgb(96, 16, 216);
@@ -33,21 +32,27 @@ body{
 
 
 .navbar-nav{
-    color: black;
+     color: black;
     transition: all 8s;
+
 }
 .navbar-nav li a:hover{
-    background-color:black;/*color de fondo al tocar con el mouse*/
-    padding: 10px;/*este le va a dar mas relleno*/
-    
+    background-color:black;
+    color: yellow;
     font-style: oblique;
 }
 h1, h2, h3 {
     color: white;
     text-align: center;
-    margin-bottom: 1rem;
-    display: grid;
-   justify-self: center;
+    margin: 2rem;
+     display: grid;
+    justify-self: center;
+    position: static;
+}
+
+footer{
+    margin-top: 5rem;
+    margin-bottom: 2rem;
 }
 
 
@@ -65,21 +70,53 @@ h1, h2, h3 {
     display: grid;
     justify-items: center;   
 }
-.carrusel1__titulo {
-    text-align: center;
-    color:red
-}
-.carrusel1_descripcion{
-    text-align: center;
-    color:black
-}
+
 
 
         
 
                  /*Estilos para quienes somos*/
 
+p{
+    position: static;
+    gap: 1rem;
+    display: inline-block;
+    margin: 2rem;
 
+}
+
+ .imagenesq{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+}
+.imagenesq__img{
+    width: 20rem;
+    height: 20rem;
+    padding: 2rem;
+    margin: 2rem; 
+    border-radius: 10%; 
+   
+    
+}
+/* tablests*/
+@media screen and (min-width:768px){
+    .imagenesq{
+display: grid;
+grid-template-columns: repeat(2,1fr);
+justify-items: center;
+    }
+}
+/* desktop*/
+@media screen and (min-width:1024px){
+    .imagenesq{
+      grid-template-columns: repeat(3, 1fr);
+      width: 40rem;
+      height: 40rem;
+     
+    }
+}
 
 
 
@@ -92,10 +129,14 @@ h1, h2, h3 {
         flex-direction: column;
         align-items: center;
         gap: 40px;
+        
     }     
     
     .card img{
         height: 200px;
+        border: solid 1px black;
+        
+
     }
          /*Para tablets*/
          @media (min-width: 768px) {
@@ -213,20 +254,21 @@ h1, h2, h3 {
 
                  /*Estilos para donde encontrarnos*/
  
-                 .map-responsive{
-                    overflow:hidden;
-                    padding-bottom:56.25%;
-                    position:relative;
-                    height:0;
-                    margin-left: 5rem;
-                }
-                .map-responsive iframe{
-                    left:0;
-                    top:0;
-                    height:80%;
-                    width:80%;
-                    position:absolute;
-                }           
+   .map-responsive{
+      overflow:hidden;
+      padding-bottom:56.25%;
+      position:relative;
+      height:0;
+      margin-left: 5rem;
+     }
+
+    .map-responsive iframe{
+         left:0;
+         top:0;
+         height:80%;
+         width:80%;
+        position:absolute;
+     }           
 
  .enlace{
     display: grid;
