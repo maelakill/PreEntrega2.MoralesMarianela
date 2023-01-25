@@ -32,6 +32,25 @@ body{
 }
 
 
+.navbar-nav{
+    color: black;
+    transition: all 8s;
+}
+.navbar-nav li a:hover{
+    background-color:black;/*color de fondo al tocar con el mouse*/
+    padding: 10px;/*este le va a dar mas relleno*/
+    
+    font-style: oblique;
+}
+h1, h2, h3 {
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+    display: grid;
+   justify-self: center;
+}
+
+
 
               /*Estilos para el index*/
  /* carrusel*/
@@ -39,8 +58,21 @@ body{
     width:700px; 
  }
  .carousel-item img{
-    height: 500px;
+   height: 500px;
+
  }
+.carrusel1{
+    display: grid;
+    justify-items: center;   
+}
+.carrusel1__titulo {
+    text-align: center;
+    color:red
+}
+.carrusel1_descripcion{
+    text-align: center;
+    color:black
+}
 
 
         
@@ -53,9 +85,7 @@ body{
 
 
                  /*Estilos para nuestros productos*/
- h1, h2, h3 {
-    color: white;
-}
+
                          /* cards*/
     .padre-cards{
         display: flex;
@@ -98,14 +128,106 @@ body{
 
                  /*Estilos para fotos*/
 
+                 #galeria-nela{
+                    grid-area: galeria;  
+                }
+                #galeria-nela h2{
+                    text-align: center;
+                    margin-top: 5rem;
+                }
                 
+                .fotos-nela{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 2rem;
+                    margin-top: 2rem;
+                    
+                }
+                .fotos-nela :focus{
+                    width: 2rem;
+                }
+                
+                @media screen and (min-width:768px){
+                    .fotos-nela{
+                        display: grid;
+                        grid-template-columns: repeat(1, 1fr);
+                        justify-items: center;
+                        gap: 1rem;
+                    }
+                }
+                @media screen and (min-width:1024px) {
+                    .fotos-nela{
+                        grid-template-columns: repeat(2, 2fr);
+                       background-image: linear-gradient(rgb(9, 9, 95), rgba(53, 53, 170, 0.724));
+                    }
+                }
+                
+                .fotos-nela img{
+                    width: 500px;
+                    height:500px;
+                }
+                
+
+         /*estilos de mis banners*/
+#banners-nela{
+    grid-area: banners;
+    margin-top: 2rem;
+}
+#banners-nela h3{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.padre-banners{
+    background-color: #eaeaea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   gap: 1rem;
+   padding: 1.5rem;
+}
+
+@media screen and (min-width:768px) {
+    .padre-banners{
+        display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       justify-items: center;
+
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .padre-banners{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+}
+.hijo-banner{
+    text-align: center;
+}       
 
 
 
 
 
                  /*Estilos para donde encontrarnos*/
-           
+ 
+                 .map-responsive{
+                    overflow:hidden;
+                    padding-bottom:56.25%;
+                    position:relative;
+                    height:0;
+                    margin-left: 5rem;
+                }
+                .map-responsive iframe{
+                    left:0;
+                    top:0;
+                    height:80%;
+                    width:80%;
+                    position:absolute;
+                }           
+
  .enlace{
     display: grid;
     justify-items: start;
@@ -138,6 +260,7 @@ p{
     line-height: 2;
 }
 ul li{ 
-    list-style:circle;
+    list-style:none;
+    text-align: center;
 }
 
