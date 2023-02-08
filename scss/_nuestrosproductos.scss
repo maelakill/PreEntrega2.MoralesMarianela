@@ -1,0 +1,159 @@
+/*Estilos para nuestros productos*/
+/*Cards*/
+.padre-cards{
+	display: flex;
+	flex-direction: column; 
+	align-items: center;
+	gap: 40px; 
+}
+.card img{
+    height: 200px;
+   border: solid 1px black;
+
+  } 
+/*Tablet*/
+  @media (min-width:$tablet) {
+	.padre-cards{
+        display: grid; 
+		grid-template-columns: repeat(2, 1fr); 
+		justify-items: center;
+    }
+} 
+/*Desktop*/
+@media (min-width:$desktop) {
+		.padre-cards{
+    grid-template-columns: repeat(3, 1fr);
+        }
+    } 
+
+/*Desktop grande*/
+@media (min-width:$desktopXG) {
+	.padre-cards{
+    display: flex;
+	flex-direction: row; 
+	flex-wrap: wrap;
+    }
+} 
+ /*Filtros de productos*/ 
+ .container-cards{
+ display:flex; 
+ flex-wrap: wrap;
+ gap: 20px; 
+ justify-content: center;
+ }
+ /*Tablet*/ 
+ @media (max-width:$tablet){
+    .container-cards{
+        display: grid;
+		grid-template-columns: repeat(2,1fr);
+    }
+} 
+/*Desktop*/
+@media (min-width:$desktop){
+	.container-cards{
+        grid-template-columns: repeat(3, 1fr);
+    }
+} 
+/*Desktop grande*/
+@media (max-width:$desktopXG){ 
+	.container-cards{
+        grid-template-columns: repeat(4,1fr);
+    }
+} 
+.container-opciones {
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+	label {
+		cursor: pointer;
+		padding: 8px, 15px;
+		&:nth-of-type(odd) {
+			background-color:$background-color_1;
+		}
+		&:nth-of-type(even) {
+			background-color:$background-color_2;
+		}
+	}
+}
+#bombones,
+#pavlovas,
+#minilemon,
+#todos {
+    display: none;
+}
+.card-bombones,
+    .card-pavlovas,
+    .card-minilemon,
+    .todos {
+        display: none;
+    }
+
+    #pavlovas {
+        &:checked {
+            ~ {
+                .container-cards {
+                    .card-pavlovas {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+    #bombones {
+        &:checked {
+            ~ {
+                .container-cards {
+                    .card-bombones {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+    #minilemon {
+        &:checked {
+            ~ {
+                .container-cards {
+                    .card-minilemon {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+    #todos {
+        &:checked {
+            ~ {
+                .container-cards {
+                    .card-bombones {
+                        display: flex;
+                    }
+                    .card-pavlovas {
+                        display: flex;
+                    }
+                    .card-minilemon {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+    
+.card-text{
+    color: black;
+    text-align: center;
+    font-family:$fuentePrincipal;
+    font-size: medium;
+}
+
+.btn{
+    @extend .btn;
+    background-color: $color-primario;
+    color: $color-secundario;
+
+    &:hover{
+        background-color:$color-secundario;
+        color: $color-primario;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,70 @@
+/*Estilos para fotos*/
+#galeria-nela{
+	grid-area: galeria; 
+	h2 {
+		text-align: center; 
+		margin-top: 5rem; 
+    }
+}
+.fotos-nela {
+	@include flex-columna;
+	gap: 2rem; 
+	margin-top:2rem;
+	:focus {
+		width:2rem;
+}
+}
+/*Tablets*/
+@media screen and (min-width:$tablet) {
+	.fotos-nela{
+        display: grid; 
+		grid-template-columns: repeat(1, 1fr); 
+		justify-items: center; 
+		gap: 1rem; 
+        }
+            }
+/*Desktop*/           
+@media screen and (min-width: $desktopXG) {
+		.fotos-nela{
+            grid-template-columns: repeat(2, 2fr); 
+            background-image: linear-gradient(rgb(9, 9, 95), rgba(53, 53, 170, 0.724));
+        }
+    }
+    .fotos-nela img{
+        width: 500px;
+        height:500px;
+         }
+         
+ /*estilos de mis banners*/
+ #banners-nela{
+	grid-area:banners; 
+	margin-top: 2rem;
+	h3 {
+		text-align: center; 
+		margin-bottom: 1rem; 
+    }
+}
+.padre-banners{
+@include flex-columna;
+gap: 1rem;
+padding: 1.5rem; 
+}
+/*Tablet*/
+@media screen and (min-width:$tablet) {
+	.padre-banners{
+        display: grid;
+		grid-template-columns: repeat(2, 1fr); 
+		justify-items: center;
+    }
+} 
+/*Desktop*/
+@media screen and (min-width:$desktopXG){
+.padre-banners{
+    grid-template-columns: repeat(4, 1fr),
+}
+} 
+.hijo-banner{
+    text-align: center;
+    font-size: 20px;
+}       
+

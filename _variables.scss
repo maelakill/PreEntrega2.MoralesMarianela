@@ -1,0 +1,38 @@
+/*Paletas de colores*/
+$color-primario:rgb(69, 17, 69);
+$color-secundario:rgb(230, 230, 75);
+$color-terciario:white;
+
+$background-color_1: rgb(68, 108, 193);
+$background-color_2: darkseagreen;
+
+
+/*Medidas de fuentes*/
+$icono: 60px;
+
+/*Medidas de pantallas*/
+$tablet: 768px;
+$desktop: 992px;
+$desktopXG: 1200px;
+
+/*Separaciones (Margin y Padding)*/
+$espacioXchico:10px;
+$espacioChico: 20px;
+$espacioMedicano: 40px;
+$espacioGrande: 80px;
+
+/*Fuentes*/
+$fuentePrincipal: 'M PLUS Rounded 1c', sans-serif;
+
+/*Mixin*/
+@mixin flex-columna{
+    display:f lex;
+    flex-direction: column;
+    align-items: center;
+}
+@mixin flex-fila{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

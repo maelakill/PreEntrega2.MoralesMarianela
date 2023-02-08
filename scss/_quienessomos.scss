@@ -1,0 +1,36 @@
+/*Estilos para quienes somos*/
+p{
+	position: static; 
+	gap: 1rem ;
+	display: inline-block; 
+	margin: 2rem 
+}
+.imagenesq {
+	display: flex; 
+	flex-direction: column;; 
+	align-items: center
+} 
+.imagenesq__img {
+	width: 20rem; 
+	height: 20rem; 
+	padding: 2rem; 
+	margin: 2rem ;
+	border-radius: 10% 
+}
+/*Tablet*/
+@media screen and (min-width:768px) {
+	.imagenesq{
+              display: grid; 
+			grid-template-columns: repeat(2,1fr); 
+		    justify-items: center 
+                
+} 
+}
+/*Desktop*/
+	@media screen and (min-width :1024px) {
+		.imagenesq{
+      grid-template-columns: repeat(3, 1fr); 
+						width: 40rem ;
+						height: 40rem
+        }
+    }

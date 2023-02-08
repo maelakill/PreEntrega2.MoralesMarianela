@@ -1,0 +1,30 @@
+/*Estilos para el index*/
+#carouselExampleCaptions{
+	width: 900px;
+      
+.carousel-item img {
+	height: 600px; 
+
+    
+}
+ 
+.contenedor {
+    display: flex;
+    align-items: center;
+  justify-content: center;
+ 
+} 
+}
+  /*Tablet*/  
+@media (max-width:$tablet) {
+ .carrusel-item img{ 
+		height: 70vh; 
+                    };
+        }
+ 
+/*Desktop*/
+	@media screen and (max-width:$desktopXG) {
+	.carrusel-item img{
+        width: 700px;
+		height: 700px}
+    }

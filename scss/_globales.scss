@@ -1,0 +1,81 @@
+/*Estilos generales para los 5 HTML*/
+.css{
+	margin: 0;
+	padding: 0 
+}
+.logo {
+	width: 100px;
+	display: block;
+	margin: 0 auto 
+}
+body{ 
+    font-family: $fuentePrincipal;
+	background-image: linear-gradient(to bottom, rgb(120, 8, 120), rgb(206, 116, 131),rgb(166, 166, 7), grey);
+	color: $color-terciario
+}
+.navbar-toggler {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(96, 16, 216); 
+	border-color: $color-secundario solid 1px ; 
+
+    .navbar-toggler-icon{
+        background-color: $color-secundario;
+        padding: $espacioChico;
+    }
+
+.navbar-brand {
+	color: $color-terciario;
+}
+.nav-link,
+.nav-link .active{
+	color:$color-secundario
+}
+}
+.navbar-nav {
+	li a{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: black; 
+   transition:all 1s; 
+
+		   &:hover{
+			   background-color: black;
+			   color: yellow;
+			   font-style: oblique;
+		   }
+	   }
+   }
+
+h1, h2, h3{
+	text-align: center; 
+	margin-top: $espacioMedicano; 
+    color: $color-terciario;
+}
+
+    .texto-descriptivo{ 
+        text-align: center;
+        margin-top: $espacioChico; 
+        display: grid; 
+	    justify-self: center; 
+	    position: static;
+		.texto{
+			font-size: 3rem;
+
+		}
+	
+}
+
+.btn{
+	border:solid, 1px $color-primario;
+	width: 200px;
+}
+
+footer {
+	margin-top: $espacioGrande;
+	margin-bottom: $espacioXchico;
+}
+
+
