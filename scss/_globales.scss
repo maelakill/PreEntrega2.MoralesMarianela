@@ -18,41 +18,44 @@ body{
 	align-items: center;
 	justify-content: center;
 	background-color: rgb(96, 16, 216); 
-	border-color: $color-secundario solid 1px ; 
+	border-color: $color-secundario solid 1px; 
 
     .navbar-toggler-icon{
         background-color: $color-secundario;
         padding: $espacioChico;
     }
-
-.navbar-brand {
-	color: $color-terciario;
 }
-.nav-link,
-.nav-link .active{
-	color:$color-secundario
-}
-}
-.navbar-nav {
-	li a{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   color: black; 
-   transition:all 1s; 
-
-		   &:hover{
-			   background-color: black;
-			   color: yellow;
-			   font-style: oblique;
-		   }
-	   }
+   .navbar-brand{
+    color:$color-terciario
    }
 
-h1, h2, h3{
-	text-align: center; 
-	margin-top: $espacioMedicano; 
+   .navbar-link{
     color: $color-terciario;
+    .nav-link{
+        &:active{
+            color:$color-terciario;
+        }
+    }
+   }
+ .navbar-nav{
+    li a{
+        color: black;
+        transition: 1s;
+        &:hover{
+            background-color: black;
+            color: $color-secundario;
+            font-style: oblique;
+        }
+    }
+ }
+
+h1, h2, h3 {
+    color:$color-terciario;
+    text-align: center;
+    margin: 2rem;
+     display: grid;
+    justify-self: center;
+    position: static;
 }
 
     .texto-descriptivo{ 
@@ -76,6 +79,12 @@ h1, h2, h3{
 footer {
 	margin-top: $espacioGrande;
 	margin-bottom: $espacioXchico;
-}
 
+    .container-redes a {
+        color: $color-terciario;
+        text-decoration:none;
+        font-size: 10rem;
+        margin-top:$espacioGrande;
+    }
+}
 

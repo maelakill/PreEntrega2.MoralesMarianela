@@ -1,26 +1,23 @@
 /*Estilos para el index*/
 #carouselExampleCaptions{
 	width: 900px;
-      
+  left: 255px;
+}
 .carousel-item img {
 	height: 600px; 
-
-    
+   
 }
- 
-.contenedor {
-    display: flex;
-    align-items: center;
-  justify-content: center;
- 
-} 
-}
-  /*Tablet*/  
+ /*Tablet*/  
 @media (max-width:$tablet) {
- .carrusel-item img{ 
-		height: 70vh; 
-                    };
-        }
+  #carouselExampleCaptions{
+    width: 672px;
+    left: 49px;
+  }
+}
+
+ 
+    
+    
  
 /*Desktop*/
 	@media screen and (max-width:$desktopXG) {

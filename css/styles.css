@@ -28,27 +28,30 @@ body {
   .navbar-toggler .navbar-toggler-icon {
     background-color: #e6e64b;
     padding: 20px; }
-  .navbar-toggler .navbar-brand {
+
+.navbar-brand {
+  color: white; }
+
+.navbar-link {
+  color: white; }
+  .navbar-link .nav-link:active {
     color: white; }
-  .navbar-toggler .nav-link,
-  .navbar-toggler .nav-link .active {
-    color: #e6e64b; }
 
 .navbar-nav li a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: black;
-  transition: all 1s; }
+  transition: 1s; }
   .navbar-nav li a:hover {
     background-color: black;
-    color: yellow;
+    color: #e6e64b;
     font-style: oblique; }
 
 h1, h2, h3 {
+  color: white;
   text-align: center;
-  margin-top: 40px;
-  color: white; }
+  margin: 2rem;
+  display: grid;
+  justify-self: center;
+  position: static; }
 
 .texto-descriptivo {
   text-align: center;
@@ -66,21 +69,25 @@ h1, h2, h3 {
 footer {
   margin-top: 80px;
   margin-bottom: 10px; }
+  footer .container-redes a {
+    color: white;
+    text-decoration: none;
+    font-size: 10rem;
+    margin-top: 80px; }
 
 /*Estilos para el index*/
 #carouselExampleCaptions {
-  width: 900px; }
-  #carouselExampleCaptions .carousel-item img {
-    height: 600px; }
-  #carouselExampleCaptions .contenedor {
-    display: flex;
-    align-items: center;
-    justify-content: center; }
+  width: 900px;
+  left: 255px; }
+
+.carousel-item img {
+  height: 600px; }
 
 /*Tablet*/
 @media (max-width: 768px) {
-  .carrusel-item img {
-    height: 70vh; } }
+  #carouselExampleCaptions {
+    width: 672px;
+    left: 49px; } }
 
 /*Desktop*/
 @media screen and (max-width: 1200px) {
